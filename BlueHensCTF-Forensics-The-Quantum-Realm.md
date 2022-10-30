@@ -16,15 +16,17 @@ new_image = Image.fromarray(array)
 new_image.save('new.png')
 ```
 I used vim to format the data so I can use it in the python program, if you want to learn vim, this will be a great exercise.
-The difficulty of the challenge is finding the correct dimensions of the image, the only information we have is the total number of pixels 22400. 
-Dividers of 22400:1, 2, 4, 5, 7, 8, 10, 14, 16, 20, 25, 28, 32, 35, 40, 50, 56, 64, 70, 80, 100, 112, 128, 140, 160, 175, 200, 224, 280, 320, 350, 400, 448, 560, 640, 700, 800, 896, 1120, 1400, 1600, 2240, 2800, 3200, 4480, 5600, 11200, 22400 
+The difficulty of the challenge is finding the correct dimensions of the image, the only information we have is the total number of pixels 22400.
+
+Dividers of 22400:1, 2, 4, 5, 7, 8, 10, 14, 16, 20, 25, 28, 32, 35, 40, 50, 56, 64, 70, 80, 100, 112, 128, 140, 160, 175, 200, 224, 280, 320, 350, 400, 448, 560, 640, 700, 800, 896, 1120, 1400, 1600, 2240, 2800, 3200, 4480, 5600, 11200, 22400.
+
 After many tries and fails, I found out that the correct dimensions were 400x56.
-First, use in vim this exact commands, to remove spaces, return lines from b64.txt:
+First, use in vim theses exact commands, to remove spaces, replace '\n' with ',' from b64.txt:
 ```
 :%s/ //g
 :%s/\n/,/g
 ```
-Then make sure you insert the first '[', after that, we will use a macro to set the number of pixels in each horizontal line, counting the number of pixels by eye would make me blind, what we can do is to find a looping sequence using vim motions to automate the task, here is what I came up with(make sure your cursor is on the first chars of the file, before first occurence of the char ')'):
+Then make sure you insert the first '[', after that, we will use a macro to set the number of pixels in each horizontal line, counting the number of pixels by eye is impossible, what we can do is to find a looping sequence using vim motions to automate the task, here is what I came up with (make sure your cursor is on the first chars of the file, before first occurence of the char ')'):
 type 'qa' to start recording a macro named 'a' then:
 ```
 400f)a],ENTER
