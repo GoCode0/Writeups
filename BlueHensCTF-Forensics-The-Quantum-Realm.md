@@ -33,7 +33,7 @@ Then type 'qa' to start recording a macro named 'a' then:
 ESCAPE
 r[q
 ```
-the final q at the end stops the macro from recording, then all you need to do is to type this remaining command to repeat the sequence 55 times:
+the final q at the end stops the macro from recording, finally all you need to do is to type this remaining command to repeat the sequence 55 times:
 ```
 55@a
 ```
