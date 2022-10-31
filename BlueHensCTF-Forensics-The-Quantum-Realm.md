@@ -26,12 +26,12 @@ First, use in vim theses exact commands, to remove spaces, replace '\n' with ','
 :%s/ //g
 :%s/\n/,/g
 ```
-Then make sure you insert the first '[', after that, we will use a macro to set the number of pixels in each horizontal line, counting the number of pixels by eye is impossible, what we can do is to find a looping sequence using vim motions to automate the task, here is what I came up with (make sure your cursor is on the first chars of the file, before first occurence of the char ')'):
-type 'qa' to start recording a macro named 'a' then:
+Then make sure you insert the first '[', after that, we will use a macro to set the number of pixels in each horizontal line, counting the number of pixels by eye is impossible, what we can do is to find a looping sequence (look for the 400th occurence of ')', append '],' then return to line and replace the ',' with '[') using vim macro to automate the task. Make sure your cursor is on the first chars of the file, before first occurence of ')'.
+Then type 'qa' to start recording a macro named 'a' then:
 ```
 400f)a],ENTER
 ESCAPE
-r[lq
+r[q
 ```
 the final q at the end stops the macro from recording, then all you need to do is to type this remaining command to repeat the sequence 55 times:
 ```
