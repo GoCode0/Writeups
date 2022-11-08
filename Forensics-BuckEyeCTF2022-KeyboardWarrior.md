@@ -30,3 +30,5 @@ while("00" in t1) :
 for x in t2:
     flag += keymap[x]
 print(flag)```
+
+![](https://github.com/GoCode0/Writeups/blob/main/buckeyeCTF2022Capture.png)
