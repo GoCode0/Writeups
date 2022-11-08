@@ -7,10 +7,10 @@ The challenge pcap file contains bluetooth usb transmitted data that you can dec
 
 One line bash solution: 
 ```sh
-tshark -r keyboardwarrior.pcap -Y btatt.opcode==0x001b -T json -V > hci.json && python btpcap.py
+tshark -r keyboardwarrior.pcap -Y btatt.opcode==0x001b -T json -V > hci.json && python solvepcap.py
 ```
 ![](./buckeyeCTF2022Capture.png)
-btpcap.py: 
+Python code: 
 ```py
 from json import load, dump
 #creating keymap
