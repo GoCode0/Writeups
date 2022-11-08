@@ -1,5 +1,4 @@
 ![](./buckeyeCTF2022-capure2.png)
-![](./buckeyeCTF2022Capture.png)
 The challenge pcap file contains bluetooth usb transmitted data that you can decode following theses two steps:
 > Extract the bluetooth data in json format from the pcap file (we will use tshark).
 
@@ -9,6 +8,7 @@ One line bash solution:
 ```sh
 tshark -r keyboardwarrior.pcap -Y btatt.opcode==0x001b -T json -V > hci.json && python btpcap.py
 ```
+![](./buckeyeCTF2022Capture.png)
 btpcap.py: 
 ```py
 from json import load, dump
