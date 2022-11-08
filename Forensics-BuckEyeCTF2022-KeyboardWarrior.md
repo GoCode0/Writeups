@@ -30,5 +30,5 @@ while("00" in t1) :
 
 for x in t2:
     flag += keymap[x]
-print(flag)```
-
+print(flag)
+```
