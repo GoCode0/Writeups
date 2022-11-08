@@ -31,6 +31,7 @@ t1 = [x["_source"]["layers"]["btatt"]["btatt.value"][6:8] for x in t]
 while("00" in t1) :
     t1.remove("00")
 
+#append each decoded character to the flag
 for x in t2:
     flag += keymap[x]
 print(flag)
