@@ -1,3 +1,4 @@
+![capture](./buckeyeCTF2022Capture.png)
 The challenge pcap file contains bluetooth usb transmitted data that you can decode following theses two steps:
 > Extract the bluetooth data in json format from the pcap file (we will use tshark).
 
@@ -31,4 +32,3 @@ for x in t2:
     flag += keymap[x]
 print(flag)```
 
-![capture](./buckeyeCTF2022Capture.png)
