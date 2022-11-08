@@ -1,6 +1,6 @@
 ![](./buckeyeCTF2022-capure2.png)
 
-The challenge pcap file [](./keyboardwarrior.pcap) contains bluetooth usb transmitted data that you can decode following theses two steps:
+The challenge pcap [file](./keyboardwarrior.pcap) contains bluetooth usb transmitted data that you can decode following theses two steps:
 > Extract the bluetooth data in json format from the pcap file (we will use tshark).
 
 > Create a keymap of each keystroke data from the reference (look page 55+):  https://www.usb.org/sites/default/files/documents/hut1_12v2.pdf
