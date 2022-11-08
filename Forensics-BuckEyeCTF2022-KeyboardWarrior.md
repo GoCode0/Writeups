@@ -1,5 +1,6 @@
 The challenge pcap file contains bluetooth transmitted data that you can be decoded following theses two steps:
 > Extract the json data if the bluetooth ATT protocol from the pcap file (we will use tshark).
+
 > Create a keymap of each keystroke data from the reference (look page 55+):  https://www.usb.org/sites/default/files/documents/hut1_12v2.pdf
 
 One line bash solution: 
