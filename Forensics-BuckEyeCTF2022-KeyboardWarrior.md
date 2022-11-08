@@ -31,4 +31,4 @@ for x in t2:
     flag += keymap[x]
 print(flag)```
 
-![](https://github.com/GoCode0/Writeups/blob/main/buckeyeCTF2022Capture.png)
+![capture](https://github.com/GoCode0/Writeups/blob/main/buckeyeCTF2022Capture.png)
